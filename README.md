@@ -1,2 +1,2 @@
 # MysqlProtocol
-用nio实现mysql协议，连接数据库查询数据
+Using Java NIO to analyze MySQL protocol. and query databases,show the detail datas which return back to the client
