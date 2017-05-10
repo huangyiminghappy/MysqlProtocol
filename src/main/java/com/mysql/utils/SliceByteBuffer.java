@@ -6,7 +6,6 @@ import java.nio.ByteBuffer;
 
 /**
  * 不支持mark
- * @author dingwei2
  *
  */
 public class SliceByteBuffer {

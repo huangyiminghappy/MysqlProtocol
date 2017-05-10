@@ -2,7 +2,6 @@ package com.mysql.protocol;
 
 /**
  * 
- * @author dingwei2
  * 
  * 
  * 

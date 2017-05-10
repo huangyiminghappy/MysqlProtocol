@@ -8,7 +8,6 @@ import com.mysql.connection.Connection;
 /**
  * 注：本次解析，重在将select 查询出来的数据，使用List<Object[]>返回，甚至转换为List<Bean>
  * 
- * @author dingwei2
  *
  */
 @SuppressWarnings("serial")

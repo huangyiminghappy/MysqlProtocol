@@ -1,7 +1,6 @@
 package com.mysql.protocol;
 /**
  * 
- * @author dingwei2
  * 
  * 服务端--》 客户端(Ok报文)
  * 

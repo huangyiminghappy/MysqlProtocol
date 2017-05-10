@@ -12,8 +12,7 @@ package com.mysql.protocol;
  *  int<2>	status_flags	Status Flags
  * }
 
- * @author dingwei2
- *
+  *
  */
 public class EOFPacket extends Packet {
 	

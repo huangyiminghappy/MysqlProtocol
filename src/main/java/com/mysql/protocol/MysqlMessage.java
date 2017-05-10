@@ -6,7 +6,6 @@ import java.nio.ByteBuffer;
 /**
  * 解析mysql数据包
  * 数字型，使用小端序列进行传输
- * @author dingwei2
  *
  */
 public class MysqlMessage implements Serializable {

@@ -16,7 +16,6 @@ package com.mysql.protocol;
  * }
  * string<EOF>	error_message	human readable error message
  * 
- * @author dingwei2
  *
  */
 public class ErrorPacket extends Packet {

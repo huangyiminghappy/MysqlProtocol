@@ -12,7 +12,6 @@ import com.mysql.utils.SeqUtils;
 /**
  * 验证数据包
  * 客户端在收到服务端的握手协议后，需要向服务器验证权限（用户名进行登录）
- * @author dingwei2
  * 
  * Protocol::HandshakeResponse41:
  * 4              capability flags, CLIENT_PROTOCOL_41 always set

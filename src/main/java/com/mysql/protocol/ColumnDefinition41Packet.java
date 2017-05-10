@@ -2,7 +2,6 @@ package com.mysql.protocol;
 
 /**
  * 
- * @author dingwei2
  * lenenc_str     catalog
  * lenenc_str     schema
  * lenenc_str     table
