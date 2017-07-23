@@ -1,7 +1,7 @@
 # MysqlProtocol
 Using Java NIO to analyze MySQL protocol. and query databases,show the detail datas which return back to the client.
 虽然想用英文介绍，发现还是中文介绍更懂点。
-1.大小端
+## 1.大小端
 理解mysql协议一个很重要的内容就是理解大小端。
 mysql 通信协议使用小端序列进行传输。
 大端序列与小端序列：
