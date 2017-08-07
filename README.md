@@ -36,7 +36,7 @@ Mysql报文中整数值分别有 1、2、3、4、8字节长度，使用小端序
 字符串长度不固定，无'NULL'(0x00)的介绍符，编码方式与上面的Length Code Binary。
 3、协议描述mysql通信协议描述
 Type	Description
-int<1>	1 byte Protocol::FixedLengthInteger
+int<1>	1 byte Protocol::FixedLengthInteger</br>
 int<2>	2 byte Protocol::FixedLengthInteger
 int<3>	3 byte Protocol::FixedLengthInteger
 int<4>	4 byte Protocol::FixedLengthInteger
