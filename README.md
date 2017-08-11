@@ -16,15 +16,15 @@ mysql 通信协议使用小端序列进行传输。
 3） 服务器向客户端发送认证结果报文（OK Package或 Error Package）或其他响应结果。
 
 ## 2. Mysql通信协议基础：
-1、报文结构
+#### 1、报文结构
 mysql通信报文分为 消息头与消息体两部分。
 其中消息头固定4个字节，前个字节为消息体的长度，1个处理序列号。
-2、Mysql 基本类型
-2.1 整数值
+#### 2、Mysql 基本类型
+##### 2.1 整数值
 Mysql报文中整数值分别有 1、2、3、4、8字节长度，使用小端序列传输。（接收方先接收到 整数的低位部分）
-2.2 字符串(以Null结尾 0x00)(Null-Terminated String)
+##### 2.2 字符串(以Null结尾 0x00)(Null-Terminated String)
 字符串长度不固定，当遇到'NULL'(0x00) 字符时结束。
-2.3 二进制数据(长度编码)(Length Coded Binary)
+##### 2.3 二进制数据(长度编码)(Length Coded Binary)
 数据长度不固定，字节数由第一个字节决定。
 第一个字节值	后续字节数	长度值说明
 0-250	0	第一个字节值即为数据的真实长度
@@ -32,20 +32,20 @@ Mysql报文中整数值分别有 1、2、3、4、8字节长度，使用小端序
 252	2	后续额外2个字节标识了数据的真实长度
 253	3	后续额外3个字节标识了数据的真实长度
 254	8	后续额外8个字节标识了数据的真实长度
-2.4 字符串（长度编码）(Length Coded String)
-字符串长度不固定，无'NULL'(0x00)的介绍符，编码方式与上面的Length Code Binary。
-3、协议描述mysql通信协议描述
-Type	Description
-int<1>	1 byte Protocol::FixedLengthInteger</br>
-int<2>	2 byte Protocol::FixedLengthInteger
-int<3>	3 byte Protocol::FixedLengthInteger
-int<4>	4 byte Protocol::FixedLengthInteger
-int<6>	6 byte Protocol::FixedLengthInteger
-int<8>	8 byte Protocol::FixedLengthInteger
-int<lenenc>	Protocol::LengthEncodedInteger
-string<lenenc>	Protocol::LengthEncodedString
-string<fix>	Protocol::FixedLengthString
-string<var>	Protocol::VariableLengthString:
-string<EOF>	Protocol::RestOfPacketString
-string<NUL>	Protocol::NulTerminatedString
+##### 2.4 字符串（长度编码）(Length Coded String)
+字符串长度不固定，无'NULL'(0x00)的介绍符，编码方式与上面的Length Code Binary。</br>
+#### 3、协议描述mysql通信协议描述</br>
+Type	Description</br>
+int<1>	1 byte Protocol::FixedLengthInteger </br>
+int<2>	2 byte Protocol::FixedLengthInteger </br>
+int<3>	3 byte Protocol::FixedLengthInteger </br>
+int<4>	4 byte Protocol::FixedLengthInteger </br>
+int<6>	6 byte Protocol::FixedLengthInteger </br>
+int<8>	8 byte Protocol::FixedLengthInteger </br>
+int<lenenc>	Protocol::LengthEncodedInteger </br>
+string<lenenc>	Protocol::LengthEncodedString </br>
+string<fix>	Protocol::FixedLengthString </br>
+string<var>	Protocol::VariableLengthString: </br>
+string<EOF>	Protocol::RestOfPacketString </br>
+string<NUL>	Protocol::NulTerminatedString </br>
 
